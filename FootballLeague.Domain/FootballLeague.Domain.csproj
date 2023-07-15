@@ -10,8 +10,4 @@
     <PackageReference Include="MediatR" Version="12.1.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-
 </Project>

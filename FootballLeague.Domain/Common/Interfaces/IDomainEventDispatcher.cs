@@ -8,5 +8,5 @@ namespace FootballLeague.Domain.Common.Interfaces;
 
 public interface IDomainEventDispatcher
 {
-    Task DispatcherAndClearEvents(IEnumerable<BaseEntity> entitiesWithEvents)
+    Task DispatcherAndClearEvents(IEnumerable<BaseEntity> entitiesWithEvents);
 }
