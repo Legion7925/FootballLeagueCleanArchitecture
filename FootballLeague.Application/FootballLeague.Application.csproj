@@ -20,8 +20,4 @@
     <ProjectReference Include="..\FootballLeague.Shared\FootballLeague.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Feature\Players\Queries\" />
-  </ItemGroup>
-
 </Project>

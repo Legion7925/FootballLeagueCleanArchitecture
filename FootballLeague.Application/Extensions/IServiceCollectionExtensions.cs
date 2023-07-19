@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace FootballLeague.Application.Extensions
@@ -9,6 +10,7 @@ namespace FootballLeague.Application.Extensions
         {
             services.AddAutoMapper();
             services.AddMediator();
+            services.AddValidators();
         }
 
         public static void AddAutoMapper(this IServiceCollection services)
@@ -21,9 +23,9 @@ namespace FootballLeague.Application.Extensions
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
         }
 
-        //public static void AddValidator(this IServiceCollection services)
-        //{
-        //    services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        //}
+        public static void AddValidators(this IServiceCollection services)
+        {
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }
