@@ -19,5 +19,5 @@ public class BaseEntity : IEntity
 
     public void AddDomainEvent (BaseEvent domainEvent) => _domainEvents.Add(domainEvent);
     public void RemoveDomainEvent (BaseEvent domainEvent) => _domainEvents.Remove(domainEvent);
-    public void ClearDomainEvent(BaseEvent domainEvent) => _domainEvents.Clear();
+    public void ClearDomainEvent() => _domainEvents.Clear();
 }

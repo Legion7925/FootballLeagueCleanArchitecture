@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FootballLeague.Application.Interfaces.Repositories;
 
-public interface IUnitOfWork : IDisposable
+public interface IUnitOfWork
 {
     IGenericRepository<T> Repository<T>() where T : BaseAuditableEntity;
     Task<int> Save(CancellationToken cancellationToken);

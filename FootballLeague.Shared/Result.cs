@@ -6,8 +6,8 @@ public class Result<T> : IResult<T>
 {
     public List<string> Messages { get; set; } = new();
     public bool Succeeded { get; set; }
-    public T? Data { get; set; }
-    public Exception Exception { get; set; } = new();
+    public T Data { get; set; } = default!;
+    public Exception Exception { get; set; } = default!;
     public int Code { get; set; }
 
     #region Non Async Methods 

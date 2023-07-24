@@ -1,4 +1,6 @@
 ﻿using FootballLeague.Application.Feature.Players.Commands;
+using FootballLeague.Application.Feature.Players.Queries.GetAllPlayers;
+using FootballLeague.Domain.Entities;
 using FootballLeague.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -15,6 +17,12 @@ namespace FootballLeague.WebApi.Controllers
         public PlayersController(IMediator mediator)
         {
             this.mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<Result<List<GetAllPlayersDto>>>> GetAllPlayers()
+        {
+            return await mediator.Send(new GetAllPlayersQuery());   
         }
 
         [HttpPost]

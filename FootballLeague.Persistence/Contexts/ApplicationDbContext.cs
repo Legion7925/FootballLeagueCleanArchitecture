@@ -16,7 +16,7 @@ public class ApplicationDbContext : DbContext
         _dispatcher = dispatcher;
     }
 
-    public DbSet<Player> players => Set<Player>();
+    public DbSet<Player> Players => Set<Player>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
